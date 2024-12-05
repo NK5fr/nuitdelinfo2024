@@ -1,20 +1,27 @@
 .captcha {
-    border: 1px solid black;
+    border: 3px solid black;
     height: 300px;
     width: 400px;
+    border-collapse: collapse;
+    background: linear-gradient(180deg, #76f6ff, #4f57ff);
+}
+
+.captcha-div {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .captcha .cell {
     height: 40px;
     width: 40px;
-    border: 1px solid black;
+    border: 1px solid beige;
+    text-align: center;
 }
 
 .captcha .cell:hover {
-    background-color: gray;
+    background-color: rgb(191, 251, 255);
     cursor: pointer;
 }
