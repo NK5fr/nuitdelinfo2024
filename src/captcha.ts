@@ -58,8 +58,9 @@ function move(captcha:Element, cell:Element) {
     if(win){
         const captchaDiv = document.querySelector('.captcha-div');
         captchaDiv!.innerHTML = '';
-        const main = document.querySelector('main');
-        main!.setAttribute('style', 'display: block');
+        const main = document.querySelector('.main');
+        main!.setAttribute('style', 'display: flex');
+        sessionStorage.setItem('captcha', 'true');
     }else if(count >= distance) {
         startCaptcha(captcha);
     }
