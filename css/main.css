@@ -5,24 +5,3 @@ body {
 h1 {
     text-align: center;
 }
-
-.captcha {
-    border: 1px solid black;
-    height: 300px;
-    width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.captcha .cell {
-    height: 40px;
-    width: 40px;
-    border: 1px solid black;
-}
-
-.captcha .cell:hover {
-    background-color: gray;
-    cursor: pointer;
-}
