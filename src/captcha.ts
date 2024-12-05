@@ -17,7 +17,7 @@ function initShark(captcha:Element) {
     const i = Math.floor(Math.random() * 6);
     const j = Math.floor(Math.random() * 8);
     const cell = captcha.querySelector(`.position-${i}-${j}`);
-    cell!.innerHTML = 'S';
+    cell!.innerHTML = '&#129416;';
     cell!.classList.add('shark');
 }
 
@@ -25,10 +25,14 @@ function initExit(captcha:Element) {
     const shark = captcha.querySelector('.shark');
     const x = shark!.className.split(' ')[1].split('-')[1];
     const y = shark!.className.split(' ')[1].split('-')[2];
-    const i = Math.floor(Math.random() * 6);
-    const j = Math.floor(Math.random() * 8);
+    let i = Math.floor(Math.random() * 6);
+    let j = Math.floor(Math.random() * 8);
+    while(i == parseInt(x) && j == parseInt(y)) {
+        i = Math.floor(Math.random() * 6);
+        j = Math.floor(Math.random() * 8);
+    }
     const cell = captcha.querySelector(`.position-${i}-${j}`);
-    cell!.innerHTML = 'E';
+    cell!.innerHTML = '&#128032;';
     cell!.classList.add('exit');
 }
 
@@ -47,7 +51,7 @@ function move(captcha:Element, cell:Element) {
         shark!.innerHTML = '';
         shark!.classList.remove('shark');
         if(cell.classList.contains('exit')) win = true
-        cell.innerHTML = 'S';
+        cell.innerHTML = '&#129416;';
         cell.classList.add('shark');
         count++;
     }
