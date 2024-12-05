@@ -56,12 +56,15 @@ function move(captcha:Element, cell:Element) {
         count++;
     }
     if(win){
-        captcha.setAttribute('style', 'display: none');
+        const captchaDiv = document.querySelector('.captcha-div');
+        captchaDiv!.innerHTML = '';
         const main = document.querySelector('main');
-        main?.setAttribute('style', 'display: block');
+        main!.setAttribute('style', 'display: block');
     }else if(count >= distance) {
         startCaptcha(captcha);
     }
+    const counter = document.querySelector('.captcha-div p');
+    counter!.innerHTML = `Vous avez ${distance - count} coup pour réussir`;
 };
 
 function setDistance(captcha:Element) {
@@ -72,6 +75,8 @@ function setDistance(captcha:Element) {
     const x = exit!.className.split(' ')[1].split('-')[1];
     const y = exit!.className.split(' ')[1].split('-')[2];
     distance = Math.abs(parseInt(x) - parseInt(i)) + Math.abs(parseInt(y) - parseInt(j));
+    const counter = document.querySelector('.captcha-div p');
+    counter!.innerHTML = `Vous avez ${distance} coup pour réussir`;
 }
 
 const startCaptcha = (captcha:Element) => {
