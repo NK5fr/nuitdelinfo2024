@@ -53,6 +53,8 @@ function move(captcha:Element, cell:Element) {
     }
     if(win){
         captcha.setAttribute('style', 'display: none');
+        const main = document.querySelector('main');
+        main?.setAttribute('style', 'display: block');
     }else if(count >= distance) {
         startCaptcha(captcha);
     }

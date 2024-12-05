@@ -6,6 +6,10 @@ h1 {
     text-align: center;
 }
 
+main {
+    display: none;
+}
+
 .canvas {
     border: 3px solid #000;
 }
