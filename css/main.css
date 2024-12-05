@@ -21,3 +21,8 @@ h1 {
     width: 40px;
     border: 1px solid black;
 }
+
+.captcha .cell:hover {
+    background-color: gray;
+    cursor: pointer;
+}
