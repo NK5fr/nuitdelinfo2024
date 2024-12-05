@@ -1,3 +1,3 @@
 const text:string = 'Hello World!';
 
-console.log(text);
+console.log(text.toUpperCase());
