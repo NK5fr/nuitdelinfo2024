@@ -8,7 +8,10 @@ const standardDimensions = {
     width: 1920,    
     height: 1080
 };
-if (!captcha) {
+
+const captchaIsDone = sessionStorage.getItem('captcha');
+
+if (!captchaIsDone) {
     startCaptcha(captcha!);
 } else {
     const captchaDiv = document.querySelector('.captcha-div');
