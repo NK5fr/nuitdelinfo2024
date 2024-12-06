@@ -4,6 +4,7 @@
     width: 400px;
     border-collapse: collapse;
     background: linear-gradient(180deg, #76f6ff, #4f57ff);
+    margin: 0 auto;
 }
 
 .captcha-div {
