@@ -1,7 +1,9 @@
 # nuitdelinfo2024
 
-eau du corps humain -> eau de l'océan
-flux sanguin -> flux marin
-cellules -> plancton
-toxines -> plastiques
-poumons -> algues
+Pré requis pour lancer l'application web
+
+Installer nodejs
+
+Faire la commande npm install
+
+Faire la commande npm start
